@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Incidents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Incident number</th>
+      <th>Incident type</th>
+      <th>Call time</th>
+      <th>Closed time</th>
+      <th>Vehicle</th>
+      <th>Unit</th>
+      <th>Neighbourhood</th>
+      <th>Ward</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incidents.each do |incident| %>
+      <tr>
+        <td><%= incident.incident_number %></td>
+        <td><%= incident.incident_type %></td>
+        <td><%= incident.call_time %></td>
+        <td><%= incident.closed_time %></td>
+        <td><%= incident.vehicle %></td>
+        <td><%= incident.unit %></td>
+        <td><%= incident.neighbourhood %></td>
+        <td><%= incident.ward %></td>
+        <td><%= link_to 'Show', incident %></td>
+        <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
+        <td><%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incident', new_incident_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Incident number:</strong>
+  <%= @incident.incident_number %>
+</p>
+
+<p>
+  <strong>Incident type:</strong>
+  <%= @incident.incident_type %>
+</p>
+
+<p>
+  <strong>Call time:</strong>
+  <%= @incident.call_time %>
+</p>
+
+<p>
+  <strong>Closed time:</strong>
+  <%= @incident.closed_time %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @incident.vehicle %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @incident.unit %>
+</p>
+
+<p>
+  <strong>Neighbourhood:</strong>
+  <%= @incident.neighbourhood %>
+</p>
+
+<p>
+  <strong>Ward:</strong>
+  <%= @incident.ward %>
+</p>
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

@@ -1,0 +1,57 @@
+<%= form_with(model: incident) do |form| %>
+  <% if incident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(incident.errors.count, "error") %> prohibited this incident from being saved:</h2>
+
+      <ul>
+        <% incident.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :incident_number %>
+    <%= form.text_area :incident_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incident_type %>
+    <%= form.text_area :incident_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :call_time %>
+    <%= form.text_area :call_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :closed_time %>
+    <%= form.text_area :closed_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vehicle %>
+    <%= form.text_area :vehicle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit %>
+    <%= form.text_area :unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :neighbourhood %>
+    <%= form.text_area :neighbourhood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ward %>
+    <%= form.text_area :ward %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
